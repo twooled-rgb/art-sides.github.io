@@ -1,0 +1,845 @@
+<html lang="uk">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light">
+<title>Хронологія стилів мистецтва, 1400-1950</title>
+<meta name="description" content="Живопис, архітектура, література й музика від ренесансу до авангарду: стилі, постаті, знакові твори та те, що відбувалось одночасно.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Хронологія стилів мистецтва">
+<meta property="og:description" content="Пʼять століть європейського мистецтва: чотири види, тридцять напрямків, звʼязки між ними.">
+<meta property="og:url" content="https://hronolohiya-mystetstva.netlify.app/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23FCFBF8'/%3E%3Crect x='6' y='6' width='20' height='4' rx='2' fill='%23D6255C'/%3E%3Crect x='6' y='13' width='14' height='4' rx='2' fill='%23EE8B12'/%3E%3Crect x='6' y='20' width='18' height='4' rx='2' fill='%23149C74'/%3E%3Crect x='6' y='27' width='10' height='3' rx='1.5' fill='%234B57D8'/%3E%3C/svg%3E">
+
+<style>
+  :root{
+    color-scheme:light;
+    --paper:#FCFBF8;
+    --ink:#14141A;
+    --ink-soft:#6A6A78;
+    --line:#E4E1DA;
+    --wash:#F7F6F3;
+  }
+  *{box-sizing:border-box}
+  html{background:#FCFBF8;-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--paper);color:var(--ink);min-height:100vh;
+    font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:28px 20px 80px}
+  .screen{display:none}
+  .screen.on{display:block}
+  button{font:inherit}
+
+  .hero h1{font-size:clamp(32px,7vw,62px);line-height:1.0;margin:0 0 18px;
+    font-weight:780;letter-spacing:-.04em;max-width:16ch}
+  .hero p{font-size:clamp(16px,2.2vw,18px);line-height:1.62;color:#33333D;
+    max-width:64ch;margin:0 0 14px}
+  .hero p.small{font-size:15px;color:var(--ink-soft);max-width:62ch}
+  .rule{height:1px;background:var(--line);margin:30px 0 24px}
+  .pick-title{font-size:14px;color:var(--ink-soft);margin:0 0 14px}
+
+  .picks{display:grid;gap:12px}
+  @media(min-width:640px){.picks{grid-template-columns:1fr 1fr}}
+  .pick{display:block;width:100%;text-align:left;background:#fff;cursor:pointer;
+    border:1px solid var(--line);border-left:6px solid var(--line);
+    border-radius:16px;padding:18px 20px;color:var(--ink)}
+  .pick:hover,.pick:focus-visible{border-top-color:#14141A;border-right-color:#14141A;
+    border-bottom-color:#14141A;outline:none}
+  .pick .nm{font-size:21px;font-weight:730;letter-spacing:-.02em;margin:0 0 5px}
+  .pick .ds{font-size:14.5px;line-height:1.5;color:#33333D;margin:0 0 9px}
+  .pick .mt{font-size:13px;color:var(--ink-soft);margin:0}
+
+  .back{background:none;border:none;padding:0;margin:0 0 18px;cursor:pointer;
+    color:var(--ink-soft);font-size:14.5px}
+  .back:hover,.back:focus-visible{color:var(--ink);outline:none}
+  .sec-head{display:flex;align-items:center;gap:12px;margin:0 0 8px;flex-wrap:wrap}
+  .sec-head h2{font-size:clamp(27px,5.4vw,42px);line-height:1.05;margin:0;
+    font-weight:760;letter-spacing:-.03em}
+  .bar{width:44px;height:7px;border-radius:4px}
+  .sec-lede{font-size:15.5px;line-height:1.6;color:#33333D;max-width:62ch;margin:0 0 22px}
+
+  .search input{width:100%;font:inherit;font-size:17px;padding:15px 17px;
+    background:#fff;border:1px solid var(--line);border-radius:14px;
+    color:#14141A;-webkit-text-fill-color:#14141A;-webkit-appearance:none;appearance:none}
+  .search input:focus{outline:none;border-color:#14141A}
+  .chips{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 0}
+  .chip{font-size:13.5px;font-weight:560;padding:8px 13px;background:#fff;
+    border:1px solid var(--line);border-radius:99px;cursor:pointer;color:#33333D}
+  .chip:hover,.chip:focus-visible{border-color:#14141A;outline:none}
+  .chip.yr{color:var(--ink-soft);font-variant-numeric:tabular-nums}
+  .chips-note{font-size:13px;color:var(--ink-soft);margin:16px 0 8px}
+
+  .res{margin-top:18px;display:grid;gap:12px}
+  @media(min-width:720px){.res{grid-template-columns:1fr 1fr}}
+  .card{display:flex;gap:14px;width:100%;text-align:left;cursor:pointer;
+    background:#fff;border:1px solid var(--line);border-left:5px solid var(--line);
+    border-radius:16px;padding:14px 16px;color:var(--ink);align-items:flex-start}
+  .card:hover,.card:focus-visible{border-top-color:#14141A;border-right-color:#14141A;
+    border-bottom-color:#14141A;outline:none}
+  .thumb{width:66px;height:66px;border-radius:11px;flex:0 0 66px;
+    overflow:hidden;display:flex;align-items:center;justify-content:center;
+    font-size:19px;font-weight:700;color:#fff}
+  .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+  .tx{min-width:0;display:block}
+  .tt{font-size:17.5px;font-weight:710;display:block;margin-bottom:3px;letter-spacing:-.01em}
+  .yy{font-size:13px;color:var(--ink-soft);display:block;margin-bottom:5px;
+    font-variant-numeric:tabular-nums}
+  .dd{font-size:14px;line-height:1.5;color:#33333D;display:block}
+  .res-head{font-size:14px;color:var(--ink-soft);margin:24px 0 0}
+  .empty-res{background:var(--wash);border-radius:14px;padding:18px 20px;
+    font-size:15px;line-height:1.55;color:var(--ink-soft);margin-top:18px}
+
+  .style-top{border-top:6px solid var(--line);background:#fff;
+    border:1px solid var(--line);border-radius:18px;padding:22px 24px;margin-bottom:18px}
+  .style-top h2{font-size:clamp(26px,5.2vw,40px);line-height:1.05;margin:0 0 6px;
+    font-weight:760;letter-spacing:-.03em}
+  .style-top .meta{font-size:14px;color:var(--ink-soft);margin:0 0 14px;
+    font-variant-numeric:tabular-nums}
+  .style-top p.lead{font-size:16.5px;line-height:1.62;margin:0 0 16px;max-width:70ch}
+  .why{background:var(--wash);border-radius:13px;padding:14px 16px}
+  .why span{display:block;font-size:12.5px;color:var(--ink-soft);margin-bottom:4px}
+  .why p{margin:0;font-size:15px;line-height:1.55}
+
+  .grp{margin-top:26px}
+  .grp h3{font-size:13.5px;color:var(--ink-soft);font-weight:560;margin:0 0 12px}
+  .people{display:grid;gap:12px;grid-template-columns:repeat(2,1fr)}
+  @media(min-width:640px){.people{grid-template-columns:repeat(4,1fr)}}
+  .person{background:#fff;border:1px solid var(--line);border-radius:15px;
+    overflow:hidden;text-align:left;cursor:pointer;color:var(--ink);padding:0}
+  .person:hover,.person:focus-visible{border-color:#14141A;outline:none}
+  .ph{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;
+    font-size:26px;font-weight:700;color:#fff;overflow:hidden}
+  .ph img{width:100%;height:100%;object-fit:cover;display:block}
+  .nm2{font-size:14px;font-weight:640;line-height:1.35;padding:10px 12px 12px;
+    margin:0;display:block}
+
+  .works{display:grid;gap:12px;grid-template-columns:1fr}
+  @media(min-width:640px){.works{grid-template-columns:repeat(3,1fr)}}
+  .work{background:#fff;border:1px solid var(--line);border-radius:15px;
+    overflow:hidden;text-align:left;cursor:pointer;color:var(--ink);padding:0}
+  .work:hover,.work:focus-visible{border-color:#14141A;outline:none}
+  .phw{aspect-ratio:4/3;background:var(--wash);display:flex;align-items:center;
+    justify-content:center;color:var(--ink-soft);font-size:13px;overflow:hidden}
+  .phw img{width:100%;height:100%;object-fit:cover;display:block}
+  .tx2{padding:11px 13px 13px;display:block}
+  .nm3{font-size:15px;font-weight:680;margin-bottom:3px;line-height:1.3;display:block}
+  .yr3{font-size:13px;color:var(--ink-soft);display:block;font-variant-numeric:tabular-nums}
+  .credit{font-size:12.5px;color:var(--ink-soft);margin:12px 0 0;line-height:1.5}
+
+  .same{display:grid;gap:10px}
+  @media(min-width:720px){.same{grid-template-columns:repeat(3,1fr)}}
+  .sm{background:#fff;border:1px solid var(--line);border-left:5px solid var(--line);
+    border-radius:14px;padding:13px 15px;text-align:left;cursor:pointer;color:var(--ink)}
+  .sm:hover,.sm:focus-visible{border-top-color:#14141A;outline:none}
+  .k2{font-size:12.5px;margin:0 0 3px}
+  .v2{font-size:16px;font-weight:690;margin:0 0 2px}
+  .y2{font-size:12.5px;color:var(--ink-soft);margin:0;font-variant-numeric:tabular-nums}
+
+  .swatches{display:flex;gap:14px;margin:16px 0 0;flex-wrap:wrap}
+  .sw{display:inline-flex;align-items:center;gap:7px;font-size:13px;color:var(--ink-soft)}
+  .dot{width:11px;height:11px;border-radius:50%}
+  .readout{display:flex;align-items:flex-end;gap:16px;margin:24px 0 2px;flex-wrap:wrap}
+  .year{font-size:clamp(52px,12vw,88px);line-height:.9;font-weight:780;
+    letter-spacing:-.05em;font-variant-numeric:tabular-nums}
+  .year-note{font-size:14px;color:var(--ink-soft);padding-bottom:9px}
+  input[type=range]{width:100%;margin:14px 0 6px;height:34px;accent-color:#D6255C}
+  .ticks{display:flex;justify-content:space-between;font-size:12px;
+    color:var(--ink-soft);margin-bottom:20px}
+  .board{overflow-x:auto;overflow-y:hidden;background:#fff;
+    border:1px solid var(--line);border-radius:16px;padding:6px 0 2px;
+    -webkit-overflow-scrolling:touch}
+  .inner{position:relative;width:1780px}
+  .lane{position:relative;height:66px;border-bottom:1px solid var(--line)}
+  .lane:last-child{border-bottom:none}
+  .lane-name{position:sticky;left:0;z-index:3;display:inline-block;
+    font-size:12px;font-weight:620;color:var(--ink-soft);
+    background:linear-gradient(90deg,#fff 72%,rgba(255,255,255,0));
+    padding:8px 24px 8px 14px}
+  .block{position:absolute;top:26px;height:30px;border-radius:15px;cursor:pointer;
+    display:flex;align-items:center;padding:0 13px;font-size:12.5px;
+    font-weight:600;color:#fff;white-space:nowrap;overflow:hidden;border:none;
+    transition:transform .12s ease,box-shadow .12s ease,opacity .12s}
+  .block:hover,.block:focus-visible{transform:translateY(-2px);
+    box-shadow:0 4px 14px rgba(20,20,26,.18);outline:none}
+  .block.dim{opacity:.22}
+  .playhead{position:absolute;top:0;bottom:0;width:2px;background:#14141A;
+    pointer-events:none;z-index:4}
+  .playhead::before{content:'';position:absolute;top:0;left:-4px;width:10px;height:10px;
+    border-radius:50%;background:#14141A}
+  .swipe{display:none;font-size:12.5px;color:var(--ink-soft);margin:8px 2px 0}
+  .panel{margin-top:16px;display:grid;gap:12px}
+  @media(min-width:720px){.panel{grid-template-columns:1fr 1fr}}
+  .cell{background:#fff;border:1px solid var(--line);border-radius:16px;
+    padding:16px 18px;border-left:5px solid var(--line);cursor:pointer}
+  .cell h3{margin:0 0 3px;font-size:12px;font-weight:650}
+  .cell .nm{font-size:17px;font-weight:700;margin:0 0 6px;letter-spacing:-.01em}
+  .cell p.t{margin:0;font-size:14.5px;line-height:1.55;color:#33333D}
+  .cell.empty{background:var(--wash);cursor:default}
+  .cell.empty p.t{color:var(--ink-soft)}
+
+  @media(max-width:719px){
+    .wrap{padding:20px 14px 60px}
+    .lane{height:58px}
+    .block{top:22px;height:28px;font-size:12px;padding:0 11px}
+    .lane-name{padding:6px 20px 6px 11px}
+    .swipe{display:block}
+    .style-top,.pick{padding:16px 17px}
+  }
+  @media (prefers-reduced-motion: reduce){*{transition:none!important}}
+
+  html,body{background:#FCFBF8 !important;color:#14141A !important}
+  .pick,.card,.style-top,.person,.work,.sm,.board,.cell,.chip,.search input{background:#fff !important}
+  .why,.cell.empty,.empty-res,.phw{background:#F7F6F3 !important}
+  .block{color:#fff !important}
+  .search input{color:#14141A !important;-webkit-text-fill-color:#14141A !important}
+</style>
+
+<body style="background:#FCFBF8;color:#14141A;margin:0">
+<div class="wrap">
+
+  <section class="screen on" id="scr-home">
+    <div class="hero">
+      <h1>Пʼять століть мистецтва, розкладені по полицях</h1>
+      <p>Тут зібрані тридцять напрямків європейського мистецтва від ренесансу до авангарду:
+        хто їх робив, які твори лишились, і чому кожен наступний стиль виглядав саме так,
+        а не інакше.</p>
+      <p>Якщо ти тільки починаєш, заходь у будь-який розділ і дивись роботи з підписами,
+        цього досить, щоб перестати плутати бароко з класицизмом. Якщо орієнтуєшся давно,
+        користуйся пошуком по роках: він дає зріз усіх чотирьох мистецтв на будь-яку дату
+        і тим зручний для порівнянь.</p>
+      <p class="small">Матеріал охоплює 1400-1950 роки. Зображення підтягуються з Вікіпедії.</p>
+    </div>
+    <div class="rule"></div>
+    <p class="pick-title">З чого почнемо</p>
+    <div class="picks" id="picks"></div>
+  </section>
+
+  <section class="screen" id="scr-cat">
+    <button class="back" data-go="#/">← На головну</button>
+    <div class="sec-head"><span class="bar" id="catBar"></span><h2 id="catName"></h2></div>
+    <p class="sec-lede" id="catLede"></p>
+    <div class="search">
+      <input id="q" type="text" autocomplete="off" placeholder="Стиль, прізвище, назва твору або рік">
+    </div>
+    <p class="chips-note">Або тисни готове</p>
+    <div class="chips" id="chips"></div>
+    <p class="res-head" id="resHead"></p>
+    <div class="res" id="res"></div>
+  </section>
+
+  <section class="screen" id="scr-style">
+    <button class="back" id="styleBack">← Назад</button>
+    <div class="style-top" id="styleTop"></div>
+    <div class="grp" id="grpPeople"></div>
+    <div class="grp" id="grpWorks"></div>
+    <div class="grp" id="grpSame"></div>
+  </section>
+
+  <section class="screen" id="scr-time">
+    <button class="back" data-go="#/">← На головну</button>
+    <div class="sec-head"><h2>Що відбувалось одночасно</h2></div>
+    <p class="sec-lede">Тягни повзунок по роках. Чотири смуги показують живопис, архітектуру,
+      літературу й музику в один і той самий момент. Клац по блоку відкриває його сторінку.</p>
+    <div class="swatches" id="swatches"></div>
+    <div class="readout">
+      <div class="year" id="yearOut">1874</div>
+      <div class="year-note" id="yearNote"></div>
+    </div>
+    <input type="range" id="slider" min="1400" max="1950" value="1874" step="1" aria-label="Рік">
+    <div class="ticks"><span>1400</span><span>1550</span><span>1700</span><span>1850</span><span>1950</span></div>
+    <div class="board" id="board"><div class="inner" id="inner"><div class="playhead" id="playhead"></div></div></div>
+    <p class="swipe">Смуги гортаються вбік пальцем</p>
+    <div class="panel" id="panel"></div>
+  </section>
+
+</div>
+
+<script>
+const LANES=[
+  {key:'paint',name:'Живопис',word:'художник',color:'#D6255C',
+   lede:'Від перспективи, яка перетворила стіну на вікно, до квадрата, який перестав щось зображати. Найшвидше з чотирьох мистецтв міняло правила.'},
+  {key:'arch',name:'Архітектура',word:'архітектор',color:'#EE8B12',
+   lede:'Будівля завжди виказує замовника. Тут видно, як храм поступається палацу, палац вокзалу, а вокзал житловому кварталу.'},
+  {key:'lit',name:'Література',word:'письменник',color:'#149C74',
+   lede:'Спершу вірш і пʼєса, потім роман як головний інструмент розуміння суспільства, потім зламана оповідь модернізму.'},
+  {key:'music',name:'Музика',word:'композитор',color:'#4B57D8',
+   lede:'Від церковного багатоголосся до опери, симфонії, віртуоза-зірки і врешті до відмови від тональності як такої.'}
+];
+
+const E=[
+ {lane:'paint',s:1420,e:1600,t:'Ренесанс',
+  d:'Лінійна перспектива перетворює площину на вікно. Людина стає мірою всього, античність повертається як зразок.',
+  why:'Флоренція розбагатіла на банківській справі, замовник став світським і захотів бачити земний світ, а не тільки небесний.',
+  who:['Мазаччо','Сандро Боттічеллі','Леонардо да Вінчі','Рафаель Санті','Мікеланджело Буонарроті'],
+  works:[['Народження Венери','бл. 1485','Народження Венери Боттічеллі'],
+         ['Таємна вечеря','1495-1498','Таємна вечеря Леонардо да Вінчі'],
+         ['Афінська школа','1509-1511','Афінська школа Рафаель'],
+         ['Розпис Сікстинської капели','1508-1512','Сікстинська капела Мікеланджело']]},
+ {lane:'arch',s:1420,e:1600,t:'Ренесанс',
+  d:'Повернення античного ордера, симетрія й розрахунок замість готичного пориву вгору.',
+  why:'Заново прочитали трактат Вітрувія, і будівля перетворилась на задачу з геометрії.',
+  who:['Філіппо Брунеллескі','Леон Баттіста Альберті','Андреа Палладіо','Донато Браманте'],
+  works:[['Купол собору Санта-Марія-дель-Фйоре','1420-1436','Санта-Марія-дель-Фйоре'],
+         ['Вілла Ротонда','1567-1592','Вілла Ротонда Палладіо'],
+         ['Темпʼєтто','1502','Темпʼєтто Браманте']]},
+ {lane:'lit',s:1400,e:1620,t:'Ренесанс',
+  d:'Народжується світська література про людину, а не про святих.',
+  why:'Друкарський верстат Гутенберга здешевив книгу, і читач вперше став масовим.',
+  who:['Франческо Петрарка','Франсуа Рабле','Мігель де Сервантес','Вільям Шекспір'],
+  works:[['Гаргантюа і Пантагрюель','1532-1564','Гаргантюа і Пантагрюель'],
+         ['Гамлет','бл. 1601','Гамлет Шекспір'],
+         ['Дон Кіхот','1605 і 1615','Дон Кіхот']]},
+ {lane:'music',s:1430,e:1600,t:'Поліфонія',
+  d:'Кілька рівноправних голосів сплітаються в одну тканину, музика ще майже повністю церковна.',
+  why:'Церква вимагала, щоб слово лишалось розбірливим, і композитори вчились писати складно, але прозоро.',
+  who:['Гійом Дюфаї','Жоскен Депре','Джованні Палестрина','Орландо ді Лассо'],
+  works:[['Меса Папи Марчелло','1562','Меса папи Марчелло']]},
+
+ {lane:'paint',s:1600,e:1750,t:'Бароко',
+  d:'Різке світло з темряви, рух і діагональ замість спокою. Караваджо вмикає тенебризм, Рембрандт додає психологію.',
+  why:'Контрреформація свідомо зробила ставку на емоцію: картина мала вражати, а не пояснювати.',
+  who:['Караваджо','Пітер Пауль Рубенс','Дієго Веласкес','Рембрандт'],
+  works:[['Покликання апостола Матвія','1599-1600','Покликання апостола Матвія'],
+         ['Нічна варта','1642','Нічна варта Рембрандт'],
+         ['Меніни','1656','Меніни Веласкес']]},
+ {lane:'arch',s:1600,e:1750,t:'Бароко',
+  d:'Хвиляста стіна, овал замість кола, фасад як театральна декорація, що втягує глядача всередину.',
+  why:'Рим перебудовували як вітрину папської влади, і простір мав працювати на враження.',
+  who:['Джованні Лоренцо Берніні','Франческо Борроміні','Крістофер Рен'],
+  works:[['Колонада собору святого Петра','1656-1667','Площа Святого Петра'],
+         ['Сан-Карло алле Куатро Фонтане','1638-1641','Сан-Карло алле Куатро Фонтане'],
+         ['Собор святого Павла в Лондоні','1675-1710','Собор Святого Павла Лондон']]},
+ {lane:'lit',s:1620,e:1720,t:'Бароко і класицизм',
+  d:'Пишна метафорика в одних і сувора єдність місця, часу та дії в інших. Дві протилежні відповіді на одну добу.',
+  why:'При дворі Людовика XIV смак почали регулювати правилами, і література розділилась на вільну й регламентовану.',
+  who:['Джон Мільтон','Педро Кальдерон','Мольєр','Жан Расін'],
+  works:[['Життя це сон','1635','Життя - це сон'],
+         ['Втрачений рай','1667','Втрачений рай Мільтон'],
+         ['Тартюф','1664','Тартюф'],
+         ['Федра','1677','Федра Расін']]},
+ {lane:'music',s:1600,e:1750,t:'Бароко',
+  d:'Народжується опера, з нею бас континуо і поділ на соліста та супровід. Поліфонію доводять до межі можливого.',
+  why:'Флорентійська камерата хотіла відродити античну трагедію зі співом, а вийшла зовсім нова форма.',
+  who:['Клаудіо Монтеверді','Антоніо Вівальді','Йоганн Себастьян Бах','Георг Фрідріх Гендель'],
+  works:[['Орфей','1607','Орфей Монтеверді'],
+         ['Пори року','бл. 1725','Пори року Вівальді'],
+         ['Мистецтво фуги','1740-і','Мистецтво фуги']]},
+
+ {lane:'paint',s:1760,e:1830,t:'Класицизм',
+  d:'Чіткий контур, стримана барва, античний сюжет як урок громадянської доблесті.',
+  why:'Розкопки Помпей повернули моду на античність, а революція знайшла в ній мову для громадянського обовʼязку.',
+  who:['Жак-Луї Давід','Жан-Огюст-Домінік Енгр'],
+  works:[['Клятва Гораціїв','1784','Клятва Гораціїв'],
+         ['Смерть Марата','1793','Смерть Марата'],
+         ['Велика одаліска','1814','Велика одаліска']]},
+ {lane:'arch',s:1750,e:1840,t:'Класицизм і ампір',
+  d:'Портик, колонада, фронтон. При Наполеоні класицизм стає ампіром, мовою імперської влади. Саме звідси тягнеться лінія до сталінського ампіру.',
+  why:'Наполеон свідомо цитував Рим, щоб імперія виглядала спадкоємицею, а не новобудовою.',
+  who:['Жак-Жермен Суффло','Шарль Персьє','Джакомо Кваренгі'],
+  works:[['Пантеон у Парижі','1758-1790','Пантеон Париж'],
+         ['Вандомська колона','1810','Вандомська колона'],
+         ['Тріумфальна арка на площі Зірки','1806-1836','Тріумфальна арка Париж']]},
+ {lane:'lit',s:1750,e:1830,t:'Просвітництво',
+  d:'Розум як інструмент і водночас перші тріщини в ньому.',
+  why:'Енциклопедія Дідро зробила знання публічним, і література взялась виховувати читача.',
+  who:['Вольтер','Жан-Жак Руссо','Йоганн Вольфганг Гете','Фрідріх Шиллер'],
+  works:[['Кандід','1759','Кандід'],
+         ['Страждання молодого Вертера','1774','Страждання молодого Вертера'],
+         ['Фауст','1808 і 1832','Фауст Гете']]},
+ {lane:'music',s:1750,e:1820,t:'Віденська класика',
+  d:'Симфонія, соната й струнний квартет отримують ту форму, якою користуються досі.',
+  why:'Композитор почав працювати не тільки на двір, а й на публічний концерт, і музика стала зрозумілою з першого разу.',
+  who:['Йозеф Гайдн','Вольфганг Амадей Моцарт','Людвіг ван Бетховен'],
+  works:[['Весілля Фігаро','1786','Весілля Фігаро'],
+         ['Симфонія №5','1808','Симфонія № 5 Бетховена'],
+         ['Симфонія №9','1824','Симфонія № 9 Бетховена']]},
+
+ {lane:'paint',s:1810,e:1860,t:'Романтизм',
+  d:'Колір важливіший за контур, людина мала перед стихією, головне почуття.',
+  why:'Наполеонівські війни показали ціну великих ідей, і мистецтво повернулось від обовʼязку до переживання.',
+  who:['Франсиско Гойя','Ежен Делакруа','Вільям Тернер','Каспар Давид Фрідріх'],
+  works:[['Третє травня 1808 року','1814','Третє травня 1808 року'],
+         ['Мандрівник над морем туману','1818','Мандрівник над морем туману'],
+         ['Свобода веде народ','1830','Свобода, що веде народ']]},
+ {lane:'arch',s:1830,e:1900,t:'Неоготика й еклектика',
+  d:'Століття оглядається назад і цитує все підряд. Стилі змішуються на одному фасаді.',
+  why:'Нації шукали власне коріння, і кожна вибирала собі історичний стиль як паспорт.',
+  who:['Чарльз Баррі','Огастес Пʼюджин','Шарль Гарньє'],
+  works:[['Вестмінстерський палац','1840-1870','Вестмінстерський палац'],
+         ['Гранд-опера в Парижі','1861-1875','Опера Гарньє']]},
+ {lane:'lit',s:1800,e:1870,t:'Романтизм',
+  d:'Бунт, вигнанець, народна стихія. Сюди належить Людина, що сміється з Гуінпленом.',
+  why:'Фольклор перестав бути чимось нижчим і став джерелом, з якого пише високий автор.',
+  who:['Джордж Байрон','Віктор Гюго','Тарас Шевченко','Едгар Аллан По'],
+  works:[['Собор Паризької Богоматері','1831','Собор Паризької Богоматері роман'],
+         ['Кобзар','1840','Кобзар'],
+         ['Людина, що сміється','1869','Людина, що сміється']]},
+ {lane:'music',s:1810,e:1890,t:'Романтизм',
+  d:'Оркестр розростається, музика хоче розповідати історії. Зʼявляється віртуоз як окремий культ.',
+  why:'Фортепіано стало домашнім інструментом середнього класу, а концерт перетворився на подію для тисяч.',
+  who:['Фридерик Шопен','Ференц Ліст','Гектор Берліоз','Ріхард Вагнер'],
+  works:[['Фантастична симфонія','1830','Фантастична симфонія'],
+         ['Перстень нібелунга','поставлений 1876','Перстень нібелунга']]},
+
+ {lane:'paint',s:1840,e:1880,t:'Реалізм',
+  d:'Курбе малює каменярів у натуральну величину, як раніше малювали королів. Мистецтво спускається на землю.',
+  why:'Після революцій 1848 року робітник і селянин вперше стали законним сюжетом великого полотна.',
+  who:['Гюстав Курбе','Жан-Франсуа Мілле','Оноре Домʼє'],
+  works:[['Каменярі','1849','Каменярі Курбе'],
+         ['Похорон в Орнані','1850','Похорон в Орнані'],
+         ['Збиральниці колосся','1857','Збиральниці колосків']]},
+ {lane:'arch',s:1850,e:1900,t:'Інженерія',
+  d:'Чавун і скло змінюють правила. Конструкція перестає ховатись під декором.',
+  why:'Промисловість дала дешевий метал і нову задачу: вокзали, пасажі й виставкові зали, яких раніше просто не існувало.',
+  who:['Джозеф Пакстон','Гюстав Ейфель'],
+  works:[['Кришталевий палац','1851','Кришталевий палац'],
+         ['Ейфелева вежа','1889','Ейфелева вежа']]},
+ {lane:'lit',s:1840,e:1900,t:'Реалізм',
+  d:'Роман стає головним жанром і головним способом досліджувати суспільство.',
+  why:'Газета з продовженням друкувала романи частинами, і автор навчився тримати увагу масового читача.',
+  who:['Гюстав Флобер','Федір Достоєвський','Лев Толстой','Еміль Золя'],
+  works:[['Пані Боварі','1857','Пані Боварі'],
+         ['Злочин і кара','1866','Злочин і кара'],
+         ['Війна і мир','1869','Війна і мир'],
+         ['Жерміналь','1885','Жерміналь']]},
+
+ {lane:'paint',s:1870,e:1890,t:'Імпресіонізм',
+  d:'Вихід на пленер, полювання за світлом і миттю. Мазок перестає ховатись, глядач бачить, як зроблена картина.',
+  why:'Готова фарба в тюбиках дозволила працювати просто на вулиці, а фотографія забрала в живопису обовʼязок бути точним.',
+  who:['Клод Моне','Оґюст Ренуар','Едгар Дега','Берта Морізо'],
+  works:[['Враження. Схід сонця','1872','Враження. Схід сонця'],
+         ['Бал у Мулен де ла Галетт','1876','Бал у Мулен де ла Галетт'],
+         ['Блакитні танцівниці','бл. 1897','Блакитні танцівниці']]},
+ {lane:'paint',s:1885,e:1906,t:'Постімпресіонізм',
+  d:'Ван Гог, Сезанн і Гоген розходяться в різні боки. Сезанн шукає структуру під видимістю, і саме звідси виросте кубізм.',
+  why:'Схопленої миті виявилось замало, і кожен шукав, що стоїть за враженням: форма, символ або чистий колір.',
+  who:['Вінсент ван Гог','Поль Сезанн','Поль Гоген','Жорж Сера'],
+  works:[['Недільний день на острові Гранд-Жатт','1884-1886','Недільний день на острові Гранд-Жатт'],
+         ['Зоряна ніч','1889','Зоряна ніч'],
+         ['Гора Сент-Віктуар','1900-і','Гора Сент-Віктуар']]},
+ {lane:'music',s:1890,e:1918,t:'Імпресіонізм',
+  d:'Розмиті гармонії, цілотонні звукоряди, звук як пляма, а не як лінія.',
+  why:'Яванський гамелан на Всесвітній виставці 1889 року показав, що європейська гама не єдина можлива.',
+  who:['Клод Дебюссі','Моріс Равель'],
+  works:[['Прелюдія до пообіддя фавна','1894','Прелюдія до пообіддя фавна'],
+         ['Місячне сяйво','1905','Місячне сяйво Дебюссі'],
+         ['Болеро','1928','Болеро Равеля']]},
+
+ {lane:'arch',s:1890,e:1914,t:'Модерн',
+  d:'Рослинна лінія, кований метал, будинок як цілісний твір разом з меблями й посудом.',
+  why:'Промислове тиражування здешевило все, і митці відповіли ставкою на ручну роботу та неповторну лінію.',
+  who:['Антоніо Гауді','Віктор Орта','Йозеф Марія Ольбріх','Владислав Городецький'],
+  works:[['Готель Тассель','1893','Готель Тассель'],
+         ['Будинок з химерами','1901-1902','Будинок з химерами'],
+         ['Каса Батльо','1904-1906','Каса Батльо']]},
+ {lane:'paint',s:1890,e:1914,t:'Модерн',
+  d:'Плоский орнамент, силует, декоративність без сорому. Клімт і золото, Муха й афіша.',
+  why:'Літографія зробила афішу масовою, і високе мистецтво вперше зустрілось з рекламою на рівних.',
+  who:['Густав Клімт','Альфонс Муха','Обрі Бердслі'],
+  works:[['Афіші для Сари Бернар','з 1894','Альфонс Муха Жисмонда'],
+         ['Поцілунок','1907-1908','Поцілунок Клімт']]},
+ {lane:'lit',s:1880,e:1914,t:'Символізм',
+  d:'Слово перестає називати річ і починає натякати на неї.',
+  why:'Позитивізм пообіцяв пояснити все, і література пішла туди, де пояснення не працює.',
+  who:['Поль Верлен','Артюр Рембо','Стефан Малларме','Оскар Вайлд'],
+  works:[['Пісні без слів','1874','Романси без слів'],
+         ['Портрет Доріана Грея','1890','Портрет Доріана Грея']]},
+
+ {lane:'paint',s:1907,e:1935,t:'Авангард',
+  d:'Форма звільняється від обовʼязку щось зображати. Від кубізму до безпредметності за неповних десять років.',
+  why:'Сезанн показав, що під видимим є геометрія, а Перша світова знецінила саму ідею гарної картини про світ.',
+  who:['Пабло Пікассо','Жорж Брак','Василь Кандинський','Казимир Малевич','Олександра Екстер','Олександр Богомазов'],
+  works:[['Авіньйонські дівчата','1907','Авіньйонські дівчата'],
+         ['Композиція VII','1913','Композиція VII Кандинський'],
+         ['Чорний квадрат','1915','Чорний квадрат']]},
+ {lane:'arch',s:1919,e:1939,t:'Баугауз і конструктивізм',
+  d:'Функція диктує форму, орнамент оголошено злочином. Паралельно радянський конструктивізм робить те саме своїми засобами.',
+  why:'Після війни треба було швидко й дешево будувати житло, і краса почала означати доцільність.',
+  who:['Вальтер Гропіус','Ле Корбюзьє','Міс ван дер Рое','Володимир Татлін'],
+  works:[['Будівля Баугаузу в Дессау','1926','Баугауз Дессау'],
+         ['Вілла Савой','1928-1931','Вілла Савой'],
+         ['Держпром у Харкові','1925-1928','Держпром']]},
+ {lane:'lit',s:1910,e:1940,t:'Модернізм',
+  d:'Оповідь ламається, потік свідомості замість сюжету.',
+  why:'Психологія показала, що всередині людини немає порядку, і роман перестав вдавати, ніби він там є.',
+  who:['Джеймс Джойс','Франц Кафка','Вірджинія Вулф','Марсель Пруст'],
+  works:[['Перевтілення','1915','Перевтілення Кафка'],
+         ['Улісс','1922','Улісс роман'],
+         ['Місіс Делловей','1925','Місіс Делловей']]},
+ {lane:'music',s:1908,e:1945,t:'Атональність',
+  d:'Шенберг скасовує тональність, Стравінський ламає ритм. Паралельно народжується джаз.',
+  why:'Романтичний оркестр вичерпав свої засоби, і композитори пішли шукати нові правила там, де старих уже не було.',
+  who:['Арнольд Шенберг','Ігор Стравінський','Луї Армстронг'],
+  works:[['Місячний Пʼєро','1912','Місячний Пʼєро'],
+         ['Весна священна','1913','Весна священна']]},
+
+ {lane:'arch',s:1920,e:1940,t:'Ар-деко',
+  d:'Геометрія, зигзаг, дорогі матеріали. Останній стиль, який ще хотів бути красивим, а не тільки доцільним.',
+  why:'Паризька виставка декоративних мистецтв 1925 року дала стилю імʼя, а американський бум дав йому висоту.',
+  who:['Вільям ван Ален','Реймонд Гуд'],
+  works:[['Крайслер-білдінг','1930','Крайслер-Білдінг'],
+         ['Емпайр-стейт-білдінг','1931','Емпайр-Стейт-Білдінг']]},
+ {lane:'paint',s:1920,e:1940,t:'Ар-деко',
+  d:'Гладка поверхня, метал, швидкість, жінка за кермом як новий герой.',
+  why:'Автомобіль і літак стали символами сучасності, і живопис перейняв їхню полірованість.',
+  who:['Тамара Лемпіцька'],
+  works:[['Автопортрет у зеленому Бугатті','1929','Тамара Лемпіцька']]},
+ {lane:'lit',s:1920,e:1940,t:'Втрачене покоління',
+  d:'Покоління після великої війни, яке не вірить у великі слова.',
+  why:'Мільйони повернулись з фронту з досвідом, для якого стара пафосна мова просто не годилась.',
+  who:['Френсіс Скотт Фіцджеральд','Ернест Гемінгвей','Еріх Марія Ремарк'],
+  works:[['Великий Гетсбі','1925','Великий Гетсбі'],
+         ['Фієста','1926','Фієста роман'],
+         ['На західному фронті без змін','1929','На західному фронті без змін']]}
+];
+
+const $=id=>document.getElementById(id);
+const laneOf=k=>LANES.find(l=>l.key===k);
+const keyOf=e=>e.lane+'-'+e.t+'-'+e.s;
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+/* зображення з Вікіпедії: пошук статті, її головне зображення та адреса */
+const picCache=new Map();
+const LS_KEY='artpic:v2:';
+const LS_TTL=1000*60*60*24*14; /* два тижні */
+function lsGet(k){
+  try{
+    const raw=localStorage.getItem(LS_KEY+k); if(!raw) return undefined;
+    const o=JSON.parse(raw);
+    if(!o||!o.t||Date.now()-o.t>LS_TTL){ localStorage.removeItem(LS_KEY+k); return undefined; }
+    return o.v;
+  }catch(err){ return undefined; }
+}
+function lsSet(k,v){ try{ localStorage.setItem(LS_KEY+k,JSON.stringify({t:Date.now(),v:v})); }catch(err){} }
+const API='/w/api.php?action=query&format=json&origin=*&redirects=1';
+const PICPROPS='&prop=pageimages|info|langlinks&piprop=thumbnail&pithumbsize=600&pilicense=any&inprop=url&lllang=en&lllimit=1';
+async function apiGet(lang,params){
+  const r=await fetch('https://'+lang+'.wikipedia.org'+API+params);
+  if(!r.ok) return null;
+  const j=await r.json();
+  const pages=j&&j.query&&j.query.pages;
+  return pages?Object.values(pages).sort((a,b)=>(a.index||0)-(b.index||0)):null;
+}
+/* заголовок статті має перегукуватись із запитом, інакше пошук міг зачепити сусідню статтю */
+const tokens=s=>String(s).toLowerCase().replace(/[\u02BC'`\u0301]/g,'').split(/[^a-z\u0430-\u044f\u0456\u0457\u0454\u0491\u0451\u044b\u044d0-9]+/).filter(t=>t.length>=3);
+function titleFits(title,query){
+  const tt=tokens(title), qt=tokens(query);
+  if(!tt.length||!qt.length) return true;
+  return qt.some(q=>tt.some(t=>t.slice(0,4)===q.slice(0,4)));
+}
+async function wikiLookup(lang,query){
+  const list=await apiGet(lang,'&generator=search&gsrsearch='+encodeURIComponent(query)+'&gsrlimit=3&gsrnamespace=0'+PICPROPS);
+  if(!list||!list.length) return null;
+  const pg=list.find(x=>titleFits(x.title,query))||list[0];
+  const fits=titleFits(pg.title,query);
+  if(pg.thumbnail&&pg.thumbnail.source) return {src:pg.thumbnail.source,url:pg.fullurl,title:pg.title,fits:fits};
+  /* картинки у статті нема: пробуємо ту саму статтю англійською */
+  const ll=pg.langlinks&&pg.langlinks[0];
+  if(ll&&ll['*']){
+    try{
+      const en=await apiGet('en','&titles='+encodeURIComponent(ll['*'])+PICPROPS);
+      const ep=en&&en[0];
+      if(ep&&ep.thumbnail&&ep.thumbnail.source) return {src:ep.thumbnail.source,url:pg.fullurl,title:pg.title,fits:fits};
+    }catch(err){}
+  }
+  return {src:null,url:pg.fullurl,title:pg.title,fits:fits};
+}
+function wikiPic(query){
+  if(picCache.has(query)) return picCache.get(query);
+  const stored=lsGet(query);
+  if(stored!==undefined){ const pr=Promise.resolve(stored); picCache.set(query,pr); return pr; }
+  const p=(async()=>{
+    /* англійською шукаємо лише латинські запити, кириличні там нічого не знайдуть */
+    const langs=/[a-z]/i.test(query)?['uk','en']:['uk'];
+    let weak=null;
+    for(const lang of langs){
+      try{
+        const info=await wikiLookup(lang,query);
+        if(!info) continue;
+        if(info.src&&info.fits){ lsSet(query,info); return info; }
+        if(!weak||(info.src&&!weak.src)) weak=info;
+      }catch(err){}
+    }
+    if(weak) lsSet(query,weak);
+    return weak;
+  })();
+  picCache.set(query,p);
+  return p;
+}
+/* перебирає кілька запитів по черзі, поки не знайдеться зображення */
+async function firstPic(queries){
+  const seen=new Set(); let weak=null;
+  for(const q of queries){
+    if(!q||seen.has(q)) continue; seen.add(q);
+    const info=await wikiPic(q);
+    if(info&&info.src&&info.fits) return info;
+    if(info&&info.src&&!weak) weak=info;
+  }
+  return weak;
+}
+/* транслітерація для імен локальних файлів */
+const TR={'а':'a','б':'b','в':'v','г':'h','ґ':'g','д':'d','е':'e','є':'ie','ж':'zh',
+'з':'z','и':'y','і':'i','ї':'i','й':'i','к':'k','л':'l','м':'m','н':'n','о':'o','п':'p',
+'р':'r','с':'s','т':'t','у':'u','ф':'f','х':'kh','ц':'ts','ч':'ch','ш':'sh','щ':'shch',
+'ь':'','ю':'iu','я':'ia','ъ':'','ы':'y','э':'e','ё':'e'};
+function slugify(s){
+  return String(s).toLowerCase().split('').map(c=>{
+    if(TR[c]!==undefined) return TR[c];
+    if(/[a-z0-9]/.test(c)) return c;
+    return '-';
+  }).join('').replace(/-+/g,'-').replace(/^-|-$/g,'').slice(0,60);
+}
+
+/* власний візерунок, коли зображення немає */
+function patternSVG(seed,color){
+  let h=0; for(let i=0;i<seed.length;i++) h=(h*31+seed.charCodeAt(i))&0xffff;
+  const a=h%4, b=(h>>3)%5+3, r=(h>>6)%30+22;
+  let sh='';
+  if(a===0){
+    for(let i=0;i<b;i++) sh+='<circle cx="'+(18+i*22)+'" cy="'+(50+((i%2)?14:-14))+'" r="'+
+      (10+(i%3)*6)+'" fill="'+color+'" opacity="'+(0.18+i*0.12)+'"/>';
+  }else if(a===1){
+    for(let i=0;i<b;i++) sh+='<rect x="'+(i*(100/b))+'" y="'+(10+(i%3)*12)+'" width="'+
+      (100/b-3)+'" height="'+(70-(i%3)*14)+'" fill="'+color+'" opacity="'+(0.16+i*0.13)+'"/>';
+  }else if(a===2){
+    for(let i=0;i<b;i++) sh+='<path d="M'+(i*20)+' 100 L'+(i*20+r/2)+' 12 L'+(i*20+r)+
+      ' 100 Z" fill="'+color+'" opacity="'+(0.15+i*0.12)+'"/>';
+  }else{
+    for(let i=0;i<b;i++) sh+='<rect x="8" y="'+(8+i*(84/b))+'" width="'+(84-i*9)+'" height="'+
+      (84/b-5)+'" rx="3" fill="'+color+'" opacity="'+(0.2+i*0.13)+'"/>';
+  }
+  return '<svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" '+
+    'style="width:100%;height:100%;display:block" xmlns="http://www.w3.org/2000/svg">'+
+    '<rect width="100" height="100" fill="#F2F0EB"/>'+sh+'</svg>';
+}
+
+function fillPics(root){
+  root.querySelectorAll('[data-q]').forEach(el=>{
+    if(el.dataset.done) return;
+    el.dataset.done='1';
+    const q=el.dataset.q, color=el.dataset.color||'#6A6A78';
+    const alts=(el.dataset.alt||'').split('|').filter(Boolean);
+    el.innerHTML=patternSVG(q,color);
+    const im=new Image();
+    im.alt=q; im.decoding='async'; im.referrerPolicy='no-referrer';
+    im.onload=()=>{
+      if(!im.naturalWidth) return;
+      el.innerHTML=''; el.appendChild(im); el.classList.add('has-pic');
+    };
+    let tried=false;
+    im.onerror=()=>{
+      if(tried) return;
+      tried=true;
+      /* локального файлу немає: шукаємо у Вікіпедії за основним запитом, далі за запасними */
+      firstPic([q].concat(alts)).then(info=>{ if(info&&info.src) im.src=info.src; });
+    };
+    /* спершу власна картинка з папки images, названа транслітом */
+    im.src='images/'+slugify(q)+'.jpg';
+  });
+}
+
+/* маршрути */
+function go(hash){ location.hash=hash; }
+function showScreen(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.toggle('on',s.id===id));
+  window.scrollTo(0,0);
+}
+function route(){
+  const h=location.hash||'#/';
+  const p=h.replace(/^#\/?/,'').split('/');
+  if(p[0]==='timeline'){ showScreen('scr-time'); updateTime(); return; }
+  if(p[0]==='style'){
+    const e=E.find(x=>keyOf(x)===decodeURIComponent(p[1]||''));
+    if(e){ renderStyle(e); showScreen('scr-style'); return; }
+  }
+  if(LANES.some(l=>l.key===p[0])){ renderCat(p[0]); showScreen('scr-cat'); return; }
+  showScreen('scr-home');
+}
+window.addEventListener('hashchange',route);
+document.addEventListener('click',ev=>{
+  const b=ev.target.closest('[data-go]');
+  if(b) go(b.dataset.go);
+});
+
+/* головна */
+$('picks').innerHTML=LANES.map(l=>{
+  const ys=E.filter(e=>e.lane===l.key);
+  const a=Math.min.apply(null,ys.map(e=>e.s)), b=Math.max.apply(null,ys.map(e=>e.e));
+  return '<button class="pick" style="border-left-color:'+l.color+'" data-go="#/'+l.key+'">'+
+    '<p class="nm">'+l.name+'</p><p class="ds">'+l.lede+'</p>'+
+    '<p class="mt">'+ys.length+' напрямків, '+a+'-'+b+'</p></button>';
+}).join('')+
+'<button class="pick" style="border-left-color:#14141A" data-go="#/timeline">'+
+  '<p class="nm">Усі чотири разом</p>'+
+  '<p class="ds">Загальна шкала часу з повзунком: видно, які стилі різних мистецтв існували в один і той самий рік.</p>'+
+  '<p class="mt">для порівнянь і загальної картини</p></button>';
+
+/* розділ */
+let curLane=null;
+function renderCat(key){
+  curLane=key;
+  const l=laneOf(key);
+  $('catBar').style.background=l.color;
+  $('catName').textContent=l.name;
+  $('catLede').textContent=l.lede;
+  const items=E.filter(e=>e.lane===key).sort((a,b)=>a.s-b.s);
+  $('chips').innerHTML=items.map(e=>
+    '<button class="chip" data-k="'+esc(keyOf(e))+'">'+esc(e.t)+'</button>').join('')+
+    ['1500','1650','1790','1874','1925'].map(y=>
+    '<button class="chip yr" data-y="'+y+'">'+y+' рік</button>').join('');
+  $('q').value='';
+  renderRes(items,'Усі напрямки розділу, за хронологією');
+}
+$('chips').addEventListener('click',ev=>{
+  const c=ev.target.closest('.chip'); if(!c) return;
+  if(c.dataset.k) go('#/style/'+encodeURIComponent(c.dataset.k));
+  else { $('q').value=c.dataset.y; doSearch(); }
+});
+function card(e){
+  const l=laneOf(e.lane);
+  const w0=e.works[0];
+  const q=(w0&&w0[2])||e.t;
+  const alt=[w0&&w0[0],e.who[0],e.t].filter(Boolean).join('|');
+  return '<button class="card" style="border-left-color:'+l.color+'" data-k="'+esc(keyOf(e))+'">'+
+    '<span class="thumb" data-color="'+l.color+'" data-q="'+esc(q)+'" data-alt="'+esc(alt)+'"></span>'+
+    '<span class="tx"><span class="tt">'+esc(e.t)+'</span>'+
+    '<span class="yy">'+e.s+'-'+e.e+(e.lane!==curLane?', '+l.name:'')+'</span>'+
+    '<span class="dd">'+esc(e.d)+'</span></span></button>';
+}
+function renderRes(list,head){
+  if(!list.length){
+    $('resHead').textContent='';
+    $('res').innerHTML='<div class="empty-res">Нічого не знайшов. Спробуй прізвище, назву стилю або просто рік, наприклад 1870.</div>';
+    return;
+  }
+  $('resHead').textContent=head||'';
+  $('res').innerHTML=list.map(card).join('');
+  fillPics($('res'));
+}
+$('res').addEventListener('click',ev=>{
+  const c=ev.target.closest('.card'); if(!c) return;
+  go('#/style/'+encodeURIComponent(c.dataset.k));
+});
+const norm=s=>String(s).toLowerCase().replace(/[\u02BC'`]/g,'');
+function doSearch(){
+  const raw=$('q').value.trim();
+  const items=E.filter(e=>e.lane===curLane).sort((a,b)=>a.s-b.s);
+  if(!raw){ renderRes(items,'Усі напрямки розділу, за хронологією'); return; }
+  if(/^\d{3,4}$/.test(raw)){
+    const yr=+raw;
+    const here=items.filter(e=>yr>=e.s&&yr<=e.e);
+    const there=E.filter(e=>e.lane!==curLane&&yr>=e.s&&yr<=e.e);
+    renderRes(here.concat(there), yr+' рік: спершу цей розділ, далі що відбувалось поруч');
+    return;
+  }
+  const v=norm(raw);
+  const hit=e=>norm(e.t+' '+e.d+' '+e.why+' '+e.who.join(' ')+' '+e.works.map(w=>w[0]).join(' ')).indexOf(v)>=0;
+  const here=items.filter(hit);
+  const there=E.filter(e=>e.lane!==curLane&&hit(e));
+  renderRes(here.concat(there),'Знайдено за запитом');
+}
+$('q').addEventListener('input',doSearch);
+
+/* сторінка стилю */
+function renderStyle(e){
+  const l=laneOf(e.lane);
+  $('styleBack').onclick=function(){ go('#/'+e.lane); };
+  const top=$('styleTop');
+  top.style.borderTopColor=l.color;
+  top.innerHTML='<h2>'+esc(e.t)+'</h2>'+
+    '<p class="meta">'+esc(l.name)+', '+e.s+'-'+e.e+'</p>'+
+    '<p class="lead">'+esc(e.d)+'</p>'+
+    '<div class="why"><span>Чому стиль зʼявився саме тоді</span><p>'+esc(e.why)+'</p></div>';
+
+  $('grpPeople').innerHTML='<h3>Ключові постаті</h3><div class="people">'+
+    e.who.map(n=>'<button class="person" data-w="'+esc(n)+'">'+
+      '<span class="ph" data-color="'+l.color+'" data-q="'+esc(n)+'" data-alt="'+esc(n+' '+l.word)+'"></span>'+
+      '<span class="nm2">'+esc(n)+'</span></button>').join('')+'</div>';
+
+  $('grpWorks').innerHTML='<h3>Знакові твори</h3><div class="works">'+
+    e.works.map(w=>'<button class="work" data-w="'+esc(w[2])+'">'+
+      '<span class="phw" data-color="'+l.color+'" data-q="'+esc(w[2])+'" data-alt="'+esc([w[0],w[0]+' '+(e.who[0]||'')].join('|'))+'"></span>'+
+      '<span class="tx2"><span class="nm3">'+esc(w[0])+'</span>'+
+      '<span class="yr3">'+esc(w[1])+'</span></span></button>').join('')+'</div>'+
+    '<p class="credit">Зображення й посилання ведуть на Вікіпедію. Більшість творів до 1950 року в суспільному надбанні.</p>';
+
+  const mid=Math.round((e.s+e.e)/2);
+  const others=LANES.filter(x=>x.key!==e.lane).map(x=>{
+    const m=E.filter(a=>a.lane===x.key&&mid>=a.s&&mid<=a.e)[0];
+    return m?'<button class="sm" style="border-left-color:'+x.color+'" data-k="'+esc(keyOf(m))+'">'+
+      '<p class="k2" style="color:'+x.color+'">'+esc(x.name)+'</p>'+
+      '<p class="v2">'+esc(m.t)+'</p><p class="y2">'+m.s+'-'+m.e+'</p></button>'
+      :'<div class="sm" style="opacity:.5;border-left-color:'+x.color+'">'+
+       '<p class="k2" style="color:'+x.color+'">'+esc(x.name)+'</p>'+
+       '<p class="v2">пауза</p><p class="y2">у '+mid+' році нічого</p></div>';
+  }).join('');
+  $('grpSame').innerHTML='<h3>Що відбувалось поруч близько '+mid+' року</h3><div class="same">'+others+'</div>';
+
+  fillPics($('grpPeople')); fillPics($('grpWorks'));
+}
+document.addEventListener('click',function(ev){
+  const p=ev.target.closest('.person,.work');
+  if(!p) return;
+  wikiPic(p.dataset.w).then(info=>{
+    if(info&&info.url) window.open(info.url,'_blank','noopener');
+  });
+});
+$('grpSame').addEventListener('click',ev=>{
+  const s=ev.target.closest('.sm[data-k]'); if(!s) return;
+  go('#/style/'+encodeURIComponent(s.dataset.k));
+});
+
+/* хронологія */
+const Y0=1400,Y1=1950;
+const PX=window.matchMedia('(max-width:719px)').matches?2.3:3.2;
+const inner=$('inner'),board=$('board'),playhead=$('playhead'),slider=$('slider');
+inner.style.width=((Y1-Y0)*PX+40)+'px';
+const xp=y=>(y-Y0)*PX+20;
+$('swatches').innerHTML=LANES.map(l=>
+  '<span class="sw"><span class="dot" style="background:'+l.color+'"></span>'+l.name+'</span>').join('');
+LANES.forEach(l=>{
+  const lane=document.createElement('div');
+  lane.className='lane';
+  const nm=document.createElement('span');
+  nm.className='lane-name'; nm.textContent=l.name;
+  lane.appendChild(nm);
+  E.filter(e=>e.lane===l.key).forEach(e=>{
+    const b=document.createElement('button');
+    b.className='block';
+    b.style.left=xp(e.s)+'px';
+    b.style.width=Math.max(58,(e.e-e.s)*PX)+'px';
+    b.style.background=l.color;
+    b.textContent=e.t;
+    b.dataset.key=keyOf(e);
+    b.onclick=function(){ go('#/style/'+encodeURIComponent(keyOf(e))); };
+    lane.appendChild(b);
+  });
+  inner.appendChild(lane);
+});
+function updateTime(){
+  const y=+slider.value;
+  $('yearOut').textContent=y;
+  playhead.style.left=xp(y)+'px';
+  const active=E.filter(e=>y>=e.s&&y<=e.e);
+  $('yearNote').textContent=active.length?('одночасно активних напрямків: '+active.length):'між епохами';
+  document.querySelectorAll('.block').forEach(b=>
+    b.classList.toggle('dim',!active.some(e=>keyOf(e)===b.dataset.key)));
+  const p=$('panel'); p.innerHTML='';
+  LANES.forEach(l=>{
+    const e=active.find(a=>a.lane===l.key);
+    const c=document.createElement('div');
+    c.className='cell'+(e?'':' empty');
+    if(e){ c.style.borderLeftColor=l.color;
+           c.onclick=function(){ go('#/style/'+encodeURIComponent(keyOf(e))); }; }
+    c.innerHTML='<h3 style="color:'+(e?l.color:'#6A6A78')+'">'+l.name+'</h3>'+
+      (e?'<p class="nm">'+esc(e.t)+'</p><p class="t">'+esc(e.d)+'</p>'
+        :'<p class="t">у цей рік смуга порожня</p>');
+    p.appendChild(c);
+  });
+  board.scrollTo({left:Math.max(0,xp(y)-board.clientWidth/2),behavior:'auto'});
+}
+slider.addEventListener('input',updateTime);
+
+route();
+</script>
